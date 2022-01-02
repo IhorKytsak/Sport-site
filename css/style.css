@@ -1,0 +1,498 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&display=swap");
+
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+body {
+   font-family: "Lato", sans-serif;
+   font-size: 15px;
+   font-weight: 300;
+   color: #333;
+   line-height: 1.5;
+   overflow-x: hidden;
+}
+
+ul {
+   list-style-type: none;
+}
+
+a {
+   text-decoration: none;
+   color: #fff;
+}
+
+h1,
+h2 {
+   line-height: 1.2;
+   margin: 10px 0;
+   font-weight: 400;
+}
+
+p {
+   margin: 10px 0;
+   font-weight: 300;
+}
+
+img {
+   width: 100%;
+   height: auto;
+}
+
+/*Reuse classes*/
+.container {
+   width: 100%;
+   max-width: 1300px;
+   margin: 0 auto;
+   padding: 0 40px;
+}
+
+.flex {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 100%;
+}
+
+.grid {
+   display: grid;
+   grid-template-columns: 4fr 1fr;
+   grid-template-rows: 1fr;
+}
+
+/* Logo */
+.logo {
+   width: 70px;
+   height: 70px;
+   fill: #030923;
+   background-color: #fff;
+   transition: background-color 0.4s linear, border-radius 0.4s linear, fill 0.4s linear;
+   animation: logoAnim 2s linear;
+}
+.logo:hover {
+   fill: #fff;
+   background-color: #030923;
+   border-radius: 50%;
+}
+
+/*Navbar*/
+.navbar {
+   user-select: none;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   background-color: #030923;
+   height: 70px;
+   overflow: visible;
+   z-index: 1;
+}
+
+.navbar ul {
+   display: flex;
+}
+
+.navbar li > a {
+   padding: 23px 35px;
+   font-size: 18px;
+
+   transition: background-color 0.3s linear, font-weight 0.1s linear;
+}
+
+.navbar li > a:hover {
+   background-color: #152052;
+   font-weight: 400;
+}
+
+.dropdown {
+   position: relative;
+   text-align: center;
+}
+
+.dropdown > a:hover {
+   border-bottom: 1px solid #fff;
+}
+
+.dropdown:hover .dropdown-content {
+   display: block;
+}
+
+.dropdown-content {
+   display: none;
+   position: absolute;
+   font-weight: 300;
+   bottom: -179px;
+   left: 0;
+   right: 0;
+   background-color: #030923;
+   z-index: 2;
+}
+
+.dropdown-content a {
+   font-size: 15px;
+   padding: 15px 8px;
+   color: #fff;
+   display: block;
+
+   transition: all 0.2s linear;
+}
+
+.dropdown-content a:hover {
+   background-color: #b01541;
+   font-weight: 400;
+}
+
+/*About*/
+
+.about__img {
+   margin-top: 70px;
+   background: url(../img/messy-main.jpg) no-repeat top;
+   background-size: cover;
+   height: 100vh;
+   min-height: 500px;
+}
+
+.about__bio h1 {
+   font-size: 2em;
+   text-transform: uppercase;
+   text-align: center;
+   margin-top: 80px;
+}
+
+.about__bio h2 {
+   margin-top: 1.5em;
+   padding-left: 100px;
+}
+
+.about__bio p {
+   font-size: 18px;
+}
+
+.about__bio p::first-letter {
+   padding-left: 40px;
+}
+
+.about__side-bg {
+   position: relative;
+   background: linear-gradient(90deg, #fff 10%, #c4b5b5 50%, #fff 100%);
+}
+
+.about__side-bg::after {
+   content: "";
+   position: absolute;
+   height: 80px;
+   background: #fff;
+   bottom: -45px;
+   right: 0;
+   left: 0;
+   transform: skewY(-10deg);
+}
+
+/*Last Victory*/
+
+.last-win {
+   margin-top: 85px;
+   padding-bottom: 30px;
+   box-shadow: 100px 35px 100px 10px rgba(19, 93, 212, 0.2) inset;
+}
+
+.last-win h2 {
+   font-size: 2em;
+   text-align: center;
+   margin-bottom: 35px;
+   padding-top: 25px;
+}
+
+.last-win .grid {
+   grid-template-columns: 1fr 1fr;
+   grid-column-gap: 30px;
+}
+
+.last-win__content {
+   padding: 0 15px;
+}
+
+.last-win__content iframe {
+   width: 100%;
+   min-height: 320px;
+   align-self: center;
+}
+
+.last-win_text {
+   font-size: 18px;
+}
+
+.last-win_text p:last-child {
+   text-align: center;
+   font-size: 15px;
+   font-style: italic;
+}
+
+/* Social*/
+.social a i {
+   padding: 5px;
+   margin: 0 10px;
+
+   transition: all 0.2s linear;
+}
+
+.social a i:hover {
+   transform: scale(1.2);
+}
+
+/*Fan-coments */
+.fan-coments {
+   margin-top: 70px;
+   padding-bottom: 50px;
+   background: url(../img/fans.jpg) top no-repeat fixed;
+   background-size: cover;
+   color: #fff;
+   font-size: 18px;
+}
+
+.fan-coments h1 {
+   font-size: 2em;
+   text-transform: uppercase;
+   text-align: center;
+   padding: 50px 0 30px;
+   color: #fff;
+   text-shadow: 0 -1px 4px #fff, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #f00,
+      2px 2px 2px rgba(206, 89, 55, 0);
+}
+
+.fan-coments__item {
+   margin: 20px 0;
+   padding: 20px 15px 0;
+   background: rgba(0, 0, 0, 0.5);
+   border-bottom: 1px solid #ff8000;
+   box-shadow: inset 0px -50px 50px -30px rgba(255, 128, 0, 0.87);
+   border-radius: 10px;
+   position: relative;
+}
+
+.fan-coments__item:nth-child(1) {
+   animation: slideInFromLeft 2s ease-in;
+}
+
+.fan-coments__item:nth-child(2) {
+   animation: slideInFromRight 2s ease-in;
+}
+
+.fan-coments__item:nth-child(3) {
+   animation: slideInFromBottom 2s ease-in;
+}
+
+.fan-coments__item h2 {
+   font-size: 20px;
+}
+
+.fan-coments__text {
+   text-align: center;
+   margin-bottom: 30px;
+}
+
+.fan-coments__date {
+   font-style: italic;
+   text-align: right;
+}
+
+/*Write-comment*/
+.write-comment {
+   padding: 60px 0;
+   background: linear-gradient(to bottom, #041235 0%, transparent 100%);
+}
+
+.write-comment__form {
+   display: grid;
+   justify-content: center;
+   grid-template-columns: minmax(100px, 0.5fr) 0.2fr;
+}
+
+.write-comment__area {
+   padding: 15px;
+   font-size: 18px;
+   resize: none;
+   border: none;
+}
+
+.write-comment__area:focus {
+   outline: none;
+}
+
+.write-comment__btn {
+   font-size: 1.5em;
+   border: none;
+   border-left: 1px solid #000;
+   background-color: #041235;
+   color: #fff;
+
+   transition: box-shadow 0.2s linear;
+}
+
+.write-comment__btn:hover {
+   box-shadow: inset 0px 0px 50px 0px #ff8000;
+}
+/* Footer*/
+.footer {
+   background: #030923;
+   height: auto;
+   color: #fff;
+}
+
+/* Hamburger-menu */
+.menu__toggle,
+.menu__btn,
+.menu__btn2 {
+   display: none;
+   color: #fff;
+   justify-self: center;
+   align-self: center;
+}
+
+/* Animations */
+@keyframes logoAnim {
+   0% {
+      transform: rotate(0turn);
+      border-radius: 25%;
+   }
+   25% {
+      transform: rotate(0.33turn);
+      border-radius: 50%;
+      fill: #fff;
+      background-color: #030923;
+   }
+   75% {
+      transform: rotate(0.66turn);
+      border-radius: 50%;
+      fill: #fff;
+      background-color: #030923;
+   }
+   100% {
+      transform: rotate(1turn);
+      fill: #030923;
+      background-color: #fff;
+   }
+}
+
+@keyframes slideInFromLeft {
+   0% {
+      transform: translateX(100%);
+   }
+   100% {
+      transform: translateX(0);
+   }
+}
+
+@keyframes slideInFromRight {
+   0% {
+      transform: translateX(-100%);
+   }
+   100% {
+      transform: translateX(0);
+   }
+}
+
+@keyframes slideInFromBottom {
+   0% {
+      transform: translateY(100%);
+   }
+   100% {
+      transform: translateY(0);
+   }
+}
+
+/* Media query */
+@media (max-width: 930px) {
+   /* Navbar */
+   .menu__btn {
+      display: block;
+   }
+
+   .navbar nav {
+      display: none;
+   }
+
+   .navbar ul {
+      flex-direction: column;
+      background-color: #030923;
+   }
+
+   .navbar .container {
+      position: relative;
+   }
+
+   .menu__toggle:checked + label + label + nav {
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 70px;
+   }
+
+   .menu__toggle:checked + label {
+      display: none;
+   }
+
+   .menu__toggle:checked + label + label {
+      display: block;
+   }
+
+   .navbar li > a {
+      display: block;
+      text-align: center;
+      width: 150px;
+      padding: 12px 10px;
+   }
+
+   .dropdown > a:hover {
+      border-bottom: none;
+   }
+
+   .dropdown-content {
+      bottom: -64px;
+      left: 150px;
+      width: 160px;
+   }
+
+   .dropdown-content a {
+      padding: 8px 8px;
+   }
+
+   .dropdown:hover .dropdown-content {
+      border-left: 1px solid #fff;
+   }
+
+   /* Last Victory */
+   .last-win .grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+   }
+}
+
+@media (max-width: 520px) {
+   /* About */
+   .about .grid {
+      grid-template-columns: 1fr 0px;
+   }
+
+   /* Write-comment */
+   .write-comment__form {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 40px;
+   }
+
+   /* Footer */
+   .footer .flex {
+      flex-direction: column;
+   }
+
+   .footer {
+      padding-top: 20px;
+   }
+
+   .social {
+      padding: 20px 0 10px;
+   }
+}

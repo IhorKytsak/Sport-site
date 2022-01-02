@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Messy Club</title>
+   <link rel="icon" type="image/png" sizes="32x32" href="img/messy-logo.png">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   <!-- Sprite -->
+   <svg display="none">
+      <symbol id="logo" viewBox="0 0 300.000000 300.000000">
+         <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" stroke="none">
+            <path d="M0 1500 l0 -1500 1500 0 1500 0 0 1500 0 1500 -1500 0 -1500 0 0
+-1500z m1480 952 c17 -14 29 -51 58 -194 20 -97 40 -179 43 -182 3 -3 25 39
+49 95 47 111 61 129 94 129 47 0 55 -26 72 -211 8 -96 18 -187 23 -204 7 -27
+10 -22 42 70 30 86 38 102 68 119 31 18 37 18 75 5 37 -13 41 -17 44 -52 3
+-35 0 -39 -31 -52 -35 -14 -36 -17 -107 -232 -40 -120 -79 -228 -86 -240 -10
+-15 -24 -23 -43 -23 -52 0 -57 18 -75 245 -9 116 -16 220 -16 233 0 40 -16 23
+-50 -54 -18 -42 -43 -82 -56 -91 -22 -14 -26 -14 -48 1 -28 18 -28 19 -55 141
+-18 80 -38 149 -40 135 -7 -47 -103 -465 -111 -480 -8 -14 -21 -20 -45 -20
+-44 0 -50 13 -99 190 -52 191 -47 184 -131 190 -39 3 -76 9 -82 13 -16 10 -17
+69 -1 85 19 19 222 16 242 -3 13 -13 32 -67 52 -148 3 -15 8 -26 11 -24 4 4
+113 504 113 519 0 12 47 58 58 58 6 0 20 -8 32 -18z m-896 -1184 c8 -18 29
+-84 47 -145 18 -62 36 -113 39 -113 4 0 24 57 44 128 52 172 46 164 114 160
+l57 -3 3 -227 2 -228 -45 0 -45 0 -1 153 -1 152 -42 -125 -43 -125 -43 0 -43
+0 -41 120 -41 120 -3 -147 -3 -148 -44 0 -45 0 0 223 c0 123 3 227 7 230 3 4
+31 7 60 7 52 0 55 -2 67 -32z m736 -13 l0 -45 -115 0 -115 0 0 -50 0 -49 98
+-3 97 -3 0 -40 0 -40 -97 -3 -98 -3 0 -49 0 -50 115 0 115 0 0 -40 0 -40 -165
+0 -165 0 0 223 c0 123 3 227 7 230 3 4 78 7 165 7 l158 0 0 -45z m350 28 c60
+-19 67 -30 46 -71 l-15 -29 -59 19 c-49 16 -65 18 -100 9 -49 -14 -64 -44 -36
+-71 11 -10 55 -26 98 -35 92 -20 130 -50 141 -108 9 -44 -17 -101 -58 -131
+-44 -33 -186 -36 -255 -6 -29 12 -52 28 -52 34 0 10 7 23 35 64 1 1 22 -7 46
+-18 86 -38 189 -19 189 35 0 31 -18 40 -110 55 -62 11 -80 18 -107 45 -28 28
+-33 40 -33 82 0 48 16 84 50 110 42 35 141 42 220 16z m407 2 c68 -20 77 -33
+52 -71 l-19 -31 -58 20 c-49 15 -65 17 -100 8 -49 -14 -64 -44 -36 -71 11 -10
+54 -25 97 -35 97 -21 136 -51 144 -111 13 -96 -56 -154 -183 -154 -79 0 -133
+13 -164 38 -21 17 -21 18 -3 50 12 22 23 30 33 26 84 -36 148 -43 194 -23 30
+14 39 34 26 59 -11 21 -21 25 -100 39 -78 14 -104 25 -130 58 -32 40 -25 122
+14 162 48 50 139 64 233 36z m233 -82 c24 -51 47 -93 50 -93 3 0 26 42 50 93
+l45 92 48 3 c26 2 47 0 47 -4 0 -3 -31 -66 -70 -139 l-70 -132 0 -92 0 -91
+-50 0 -50 0 0 92 0 91 -70 133 c-38 73 -70 135 -70 139 0 3 21 5 48 3 l47 -3
+45 -92z" />
+         </g>
+      </symbol>
+   </svg>
+
+   <!-- Navbar -->
+   <div class="navbar">
+      <div class="container flex">
+         <input class="menu__toggle" id="menu__toggle" type="checkbox" />
+         <label class="menu__btn" for="menu__toggle">
+            <i class="fas fa-bars fa-2x"></i>
+         </label>
+         <label class="menu__btn2" for="menu__toggle">
+            <i class="fas fa-align-left fa-2x"></i>
+         </label>
+         <nav>
+            <ul>
+               <li><a href="index.html">Main</a></li>
+               <li class="dropdown">
+                  <a class="droplink" href="#">Matches
+                     <i class="fa fa-angle-down"></i>
+                  </a>
+                  <div class="dropdown-content">
+                     <a href="#">Calendar of matches</a>
+                     <a href="#">Next game</a>
+                     <a href="#">Raitings</a>
+                  </div>
+               </li>
+               <li><a href="#">News</a></li>
+               <li><a href="fans.html">Fans</a></li>
+               <li><a href="#">Contacts</a></li>
+               <li><a href="#">Admin</a></li>
+            </ul>
+         </nav>
+         <svg class="logo">
+            <use xlink:href="#logo"></use>
+         </svg>
+      </div>
+   </div>
+
+   <!-- Fan-coments -->
+   <section class="fan-coments">
+      <div class="container">
+         <h1>Comments and wishes of fans </h1>
+         <div class="fan-coments__items">
+
+            <div class="fan-coments__item">
+               <p class="fan-coments__text">“I have no doubt that Messi has made me a better player and vice-versa. I
+                  have an excellent
+                  professional relationship [with him] because we have been sharing the same moments for 15 years. We've
+                  never had dinner together but I don't see why we can't in the future. I don't see a problem with
+                  that.”</p>
+
+               <p class="fan-coments__date">23.12.2020, 17:40</p>
+               <h2>Cristiano Ronaldo</h2>
+            </div>
+
+            <div class="fan-coments__item">
+               <p class="fan-coments__text">"Happy New Year Leo! Last year brought you a lot of good, in particular you
+                  won the golden ball for the seventh time. To be honest, I'm not a fan of football and I rarely watch
+                  it, but I like you as a person. I don't know if you will read this message or not, but I wish you a
+                  good year for you and your family. So keep bro)))))))))) "</p>
+
+               <p class="fan-coments__date">30.12.2020, 13:22</p>
+               <h2>Anonymous</h2>
+            </div>
+
+            <div class="fan-coments__item">
+               <p class="fan-coments__text">"I have seen him doing stuff in training and it is just amazing. When he
+                  gets upset, he runs around the whole team. There is nothing you can do. When you have Leo Messi it is
+                  a big advantage. When you have that man in your side, anything can happen."</p>
+
+               <p class="fan-coments__date">30.12.2020, 21:40</p>
+               <h2>Thierry Henry</h2>
+            </div>
+
+            <div class="fan-coments__item">
+               <p class="fan-coments__text">"Fella’s a genius. Best ever by a distance in my life time. Never really saw
+                  Pele… Souness, Gullit, Venables and now Rooney agree Messi is the best they have seen. He plays a game
+                  with which we are not familiar."</p>
+
+               <p class="fan-coments__date">31.12.2020, 08:11</p>
+               <h2>Gary Lineker</h2>
+            </div>
+
+            <div class="fan-coments__item">
+               <p class="fan-coments__text">"And best of all, you had to take the compressor with you and at the same
+                  time the basketball basket in order to check everything to the maximum! It would be more solid and
+                  creative. The manufacturer is a world famous brand in the world. And the production and quality
+                  control in Thailand is always at the highest level. Therefore, the goods arrive at the point of
+                  delivery in a deflated and folded form, because it is convenient to transport it in this form, so
+                  there is less chance of the ball covering being damaged or scratched. And most importantly, the
+                  seller provides a guarantee for the goods! Therefore, a wild desire, in an era of a pandemic, to
+                  come to the point and puff with a pump in front of everyone, then make a couple of saves with a
+                  ball under the thunderous applause of other buyers in line, well, right there is no such need ... "
+               </p>
+
+               <p class="fan-coments__date">01.01.2021, 17:00</p>
+               <h2>Artur Bondar</h2>
+            </div>
+
+            <div class="fan-coments__item">
+               <p class="fan-coments__text">"Oh, I mistakenly sent my comment here, but hello leo) "
+               </p>
+
+               <p class="fan-coments__date">01.01.2021, 18:13</p>
+               <h2>Artur Bondar</h2>
+            </div>
+
+            <div class="fan-coments__item">
+               <p class="fan-coments__text">"For the world of football, Messi is a treasure because he is a role model
+                  for children around the world… Messi will be the player to win the most Ballons d’Or in history. He
+                  will win five, six, seven. He is incomparable. He’s in a different league."
+               </p>
+
+               <p class="fan-coments__date">02.01.2021, 10:53</p>
+               <h2>Johan Cruyff</h2>
+            </div>
+         </div>
+   </section>
+
+   <!-- Write-comment -->
+   <div class="write-comment">
+      <div class="container">
+         <form class="write-comment__form">
+            <textarea class="write-comment__area" name="letter" id="letter" cols="30" rows="7"
+               placeholder="Write message..." required></textarea>
+            <button class="write-comment__btn">Send</button>
+         </form>
+      </div>
+   </div>
+
+   <!-- Footer -->
+   <footer class="footer">
+      <div class="container flex">
+         <div>Copyright &copy; 2022</div>
+         <div class="social">
+            <a href="https://www.facebook.com/leomessi" target="_blank
+            "><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="https://www.instagram.com/leomessi/" target="_blank
+            "><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://twitter.com/WeAreMessi?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank
+            "><i class="fab fa-twitter fa-2x"></i></a>
+         </div>
+         <svg class="logo">
+            <use xlink:href="#logo"></use>
+         </svg>
+      </div>
+   </footer>
+</body>
+
+</html>
