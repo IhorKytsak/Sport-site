@@ -7,7 +7,7 @@ button.addEventListener('click', addComent);
 function addComent(event) {
    event.preventDefault();
 
-   if (textArea.value.length < 10) {
+   if (textArea.value.trim().length < 10) {
       textArea.style.cssText = `box-shadow: inset 0px 0px 15px 5px red;`
       textArea.value = '';
       return;
